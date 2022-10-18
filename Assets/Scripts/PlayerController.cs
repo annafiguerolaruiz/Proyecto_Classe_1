@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     private float xInput, yInput;
 
     private bool isWalking;
-    private Vector2 lastDirection;
+    public Vector2 lastDirection;
     private Animator _animator;
 
     private Rigidbody2D _rigidbody;

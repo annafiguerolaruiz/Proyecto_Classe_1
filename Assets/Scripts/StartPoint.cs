@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class StartPoint : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private PlayerController player;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] private Vector2 facingDirection;
+   
+    
+    private void Start()
     {
-        
+        player = FindObjectOfType<PlayerController>();
+        player.transform.position = transform.position;
+        player.lastDirection = facingDirection;
     }
 }
+
+
